@@ -118,11 +118,11 @@ const AuthForm = ({ type }: {type: string }) => {
                 </p>
             </h1>
         </header>
-        {/* {user ? ( */}
+        {user ? (
             <div className='flex flex-col gap-4'>
                 <PlaidLink user={user} variant='primary' />
             </div>
-        {/* ): ( */}
+         ): ( 
             <>
             <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
@@ -156,7 +156,7 @@ const AuthForm = ({ type }: {type: string }) => {
                             <div className='flex gap-4'>
                             <CustomInput control={form.control} 
                             name='dateOfBirth' label='Date of Birth' 
-                            placeholder='MM-DD-YYYY' />
+                            placeholder='YYYY-MM-DD' />
                             <CustomInput control={form.control} 
                             name='ssn' label='SSN' 
                             placeholder='Example: 1234' />
@@ -197,7 +197,7 @@ const AuthForm = ({ type }: {type: string }) => {
                 </Link>
             </footer>
             </>
-        {/* )} */}
+         )}
     </section>
   )
 }
